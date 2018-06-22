@@ -1,0 +1,13 @@
+環境系數:
+setenv CLASSPATH .:$HOME/4005/antlr-4.5.2-complete.jar:$CLASSPATH
+alias antlr4 'java -Xmx500M -cp "$HOME/4005/antlr-4.5.2-complete.jar:$CLASSPATH" org.antlr.v4.Tool'
+alias grun 'java org.antlr.v4.gui.TestRig'
+
+edit&complier&run
+// edit Rose.g4
+> antlr4 Rose.g
+// generate Rose.tokens Rose*.java
+> javac Rose*.java
+// generate Rose*.class
+// edit input_file
+> grun Rose program
